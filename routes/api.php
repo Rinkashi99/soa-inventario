@@ -23,13 +23,13 @@ Route::post('/inventario/remove', 'App\Http\Controllers\inventario@remover');
 //URL: /inventario/tienda/{id}
 //Respuesta: 201 {"producto":3,"nombre":"producto3","precio":10,"stock":310},{"producto":1,"nombre":"producto","precio":10,"stock":310}
 
-Route::get('/inventario/tienda/{sku}', 'App\Http\Controllers\inventario@inventarioTienda');
+Route::get('/inventario/tienda/{id}', 'App\Http\Controllers\inventario@inventarioTienda');
 
 //GET Retornar stock producto
 //URL: /inventario/producto/{id}
 //Respuesta: 201 {"tienda":10,"stock":310},{"tienda":11,"stock":310},{"tienda":12,"stock":310}
 
-Route::get('/inventario/producto/{id}', 'App\Http\Controllers\inventario@stockproducto');
+Route::get('/inventario/producto/{sku}', 'App\Http\Controllers\inventario@stockproducto');
 
 //GET Retornar stock producto tienda
 //URL: /inventario/producto/{sku}/tienda/{id}
